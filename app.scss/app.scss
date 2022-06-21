@@ -44,6 +44,10 @@
             @include flex( row , nowrap , space-between , center );
             width: 60%;
             margin: auto;
+
+            @include mv() {
+                width: 80%;
+            }
         }
         &__ul {
             @include flex( row , nowrap , center , center );
@@ -95,9 +99,17 @@
     &__main {
         @include flex( row , nowrap , center , center );
         gap: 2.5em;
+
+        @include mv() {
+            @include flex( column , nowrap , center , center );
+        }
     }
     &__ppal {
         @include flex( column , wrap , center , center );
+
+        @include mv() {
+            @include flex( column , nowrap , center , center );
+        }
     }
     &__img {
         width: 270px;
@@ -106,8 +118,8 @@
         border-radius: 50%;
 
         @include mv() {
-            width: 250px;
-            height: 250px;
+            width: 230px;
+            height: 230px;
         }
     }
     &__h2{
